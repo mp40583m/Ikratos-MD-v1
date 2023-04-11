@@ -1,7 +1,7 @@
 const rewards = {
-  exp: 15000,
-  money: 35999,
-  potion: 9,
+  نقاط: 15000,
+  فلوس: 50,
+  جرعه: 9,
 }
 const cooldown = 604800000
 let handler = async (m) => {
@@ -13,12 +13,12 @@ let handler = async (m) => {
     user[reward] += rewards[reward]
     text += `*+${rewards[reward]}* ${global.rpg.emoticon(reward)}${reward}\n`
   }
-  conn.sendButton(m.chat,'*––––––『 WEEKLY 』––––––*', text.trim(), null, [['Inventory', '.inv'], ['Monthly', '.monthly']],m)
+  conn.sendButton(m.chat,'*––––––『 أسبوعي 』––––––*', text.trim(), null, [['Inventory', '.inv'], ['Monthly', '.monthly']],m)
   user.lastweekly = new Date * 1
 }
 handler.help = ['weekly']
 handler.tags = ['rpg']
-handler.command = /^(weekly)$/i
+handler.command = /^(اسبوعي)$/i
 
 handler.cooldown = cooldown
 
