@@ -1,8 +1,8 @@
 const items = [
-    'money', 'bank', 'potion', 'trash', 'wood',
-    'rock', 'string', 'petFood', 'emerald',
-    'diamond', 'gold', 'iron', 'common',
-    'uncommon', 'mythic', 'legendary', 'pet',
+    'فلوس', 'بنك', 'جرع', 'زبالة', 'خشب',
+    'حجاره', 'خيوط, 'اكل حيوانات ', 'زمرد',
+    'الماس', 'ذهب', 'حديد', 'شائع',
+    'غير مألوف', 'أسطوري', 'اندر اسطوري', 'حيوان',
 ]
 let confirmation = {}
 async function handler(m, { conn, args, usedPrefix, command }) {
@@ -12,7 +12,7 @@ async function handler(m, { conn, args, usedPrefix, command }) {
     let lol = `Use format ${usedPrefix}${command} [type] [value] [number]
 example ${usedPrefix}${command} money 9999 @621927237001
 
-📍 Transferable items
+📍 الحجات القابلة لتحويل
 ${item.map(v => `${rpg.emoticon(v)}${v}`.trim()).join('\n')}
 `.trim()
     const type = (args[0] || '').toLowerCase()
@@ -23,12 +23,12 @@ ${item.map(v => `${rpg.emoticon(v)}${v}`.trim()).join('\n')}
     if (!(who in global.db.data.users)) return m.reply(`User ${who} not in database`)
     if (user[type] * 1 < count) return m.reply(`Your *${rpg.emoticon(type)}${type}${special(type)}* is less *${count - user[type]}*`)
     let confirm = `
-*––––––『 TRANSFER 』––––––*
+*––––––『 تحويل 』––––––*
 *🗂️ Type:* ${type} ${rpg.emoticon(type)}${special(type)}
-*🧮 Count:* ${count} 
-*📨 To:* @${(who || '').replace(/@s\.whatsapp\.net/g, '')}
+*🧮 عدد:* ${count} 
+*📨 الي:* @${(who || '').replace(/@s\.whatsapp\.net/g, '')}
 
-⏰ Timeout *60* seconds
+⏰ المهلة *60* ثانية
 `.trim()
     let c = wm
     conn.sendButton(m.chat, confirm, c, null, [['✔️'], ['✖️']], m, { mentions: [who] })
@@ -73,7 +73,7 @@ handler.before = async m => {
 
 handler.help = ['transfer', 'tf'].map(v => v + ' [type] [jumlah] [@tag]')
 handler.tags = ['rpg']
-handler.command = /^(transfer|tf)$/i
+handler.command = /^(تحويل|tf)$/i
 
 handler.disabled = false
 
