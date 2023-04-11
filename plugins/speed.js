@@ -71,11 +71,11 @@ ${readMore}
 
 
 *s ᴇ ʀ ᴠ ᴇ ʀ*
-*🛑 ʀᴀᴍ:* ${format(totalmem() - freemem())} / ${format(totalmem())}
-*🔵 ғʀᴇᴇRAM:* ${format(freemem())}
-*📑 sᴇssɪᴏɴ sɪᴢᴇ :* ${format(session.size)}
-*💻 ᴘʟᴀᴛғᴏʀᴍ :* ${os.platform()}
-*🧿 sᴇʀᴠᴇʀ :* ${os.hostname()}
+*🛑 رام:* ${format(totalmem() - freemem())} / ${format(totalmem())}
+*🔵 رامات المتاحه:* ${format(freemem())}
+*📑 حجم الجلسه :* ${format(session.size)}
+*💻 بلتورم :* ${os.platform()}
+*🧿 السيرفر :* ${os.hostname()}
 ${readMore}
 NodeJS Memory Usage*
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
@@ -90,7 +90,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 handler.help = ['ping', 'speed']
 handler.tags = ['info', 'tools']
 
-handler.command = /^(ping|speed|info)$/i
+handler.command = /^(سرعه|speed|سرعة)$/i
 export default handler
 
 const more = String.fromCharCode(8206)
