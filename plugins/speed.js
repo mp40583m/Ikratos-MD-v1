@@ -59,10 +59,10 @@ let handler = async (m, { conn, isRowner}) => {
 ${Math.round(neww - old)} ms
 ${speed} ms
 
-*ʀ ᴜ ɴ ᴛ ɪ ᴍ ᴇ* 
+*الوقت* 
 ${muptime}
 ${readMore}
-*ᴄ ʜ ᴀ ᴛ s*
+*الدردشات*
 • *${groupsIn.length}* الدردشات الجماعية
 • *${groupsIn.length}* انضمت المجموعات
 • *${groupsIn.length - groupsIn.length}* جروبات الشمال
@@ -70,7 +70,7 @@ ${readMore}
 • *${chats.length}* إجمالي الدردشات
 
 
-*s ᴇ ʀ ᴠ ᴇ ʀ*
+*السرعة*
 *🛑 رام:* ${format(totalmem() - freemem())} / ${format(totalmem())}
 *🔵 رامات المتاحه:* ${format(freemem())}
 *📑 حجم الجلسه :* ${format(session.size)}
