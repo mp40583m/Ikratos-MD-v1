@@ -12,7 +12,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (/webp|image|video/g.test(mime)) {
       if (/video/g.test(mime)) if ((q.msg || q).seconds > 11) return m.reply('Maximum 10 seconds!')
       let img = await q.download?.()
-      if (!img) throw `هات الصوره او الفيديو يلي ععايزو ملصق`
+      if (!img) throw `هات الصوره او الفيديو يلي عايزو ملصق`
       let out
       try {
         if (/webp/g.test(mime)) out = await webp2png(img)
