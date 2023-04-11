@@ -8,7 +8,7 @@ let handler = async (m, { conn }) => {
 		let img = await m.quoted.download()
 		await conn.sendMessage(m.chat, { image: img, jpegThumbnail: img }, { quoted: m })
 	} else if (m.quoted && /sticker/.test(m.quoted.mtype) && m.quoted.isAnimated) {
-		await m.reply('_In progress, please wait..._')
+		await m.reply('『  لحظة... 』')
 		let img = await m.quoted.download()
 		let out = await webpToVideo(img)
 		await conn.sendMessage(m.chat, { video: out, gifPlayback: /gif/i.test(m.text), gifAttribution: ~~(Math.random() * 2) }, { quoted: m })
@@ -16,7 +16,7 @@ let handler = async (m, { conn }) => {
 }
 handler.help = ['toimg', 'togif', 'tovid', 'tovideo']
 handler.tags = ['sticker']
-handler.command = /^to(img|gif|vid|video)$/i
+handler.command = /^صوره(img|gif|vid|video)$/i
 
 export default handler
 
