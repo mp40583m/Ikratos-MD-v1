@@ -2,7 +2,7 @@ import { addExif } from '../lib/sticker.js'
 
 
 let handler = async (m, { conn, text }) => {
-  if (!m.quoted) throw 'Quoted the sticker!'
+  if (!m.quoted) throw 'منشن علي الملصق يلي عايز تسرقو'
   let stiker = false
   try {
     let [packname, ...author] = text.split('|')
