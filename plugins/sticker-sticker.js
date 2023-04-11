@@ -12,7 +12,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (/webp|image|video/g.test(mime)) {
       if (/video/g.test(mime)) if ((q.msg || q).seconds > 11) return m.reply('Maximum 10 seconds!')
       let img = await q.download?.()
-      if (!img) throw `reply pictures/videos/stickers with commands ${usedPrefix + command}`
+      if (!img) throw `هات الصوره او الفيديو يلي ععايزو ملصق`
       let out
       try {
         if (/webp/g.test(mime)) out = await webp2png(img)
@@ -39,7 +39,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 }
 handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>']
 handler.tags = ['sticker']
-handler.command = /^s(tic?ker)?(gif)?(wm)?$/i
+handler.command = /^ملصق(tic?ker)?(gif)?(wm)?$/i
 
 export default handler
 
