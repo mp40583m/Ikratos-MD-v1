@@ -63,11 +63,11 @@ ${speed} ms
 ${muptime}
 ${readMore}
 *ᴄ ʜ ᴀ ᴛ s*
-• *${groupsIn.length}* Group Chats
-• *${groupsIn.length}* Groups Joined
-• *${groupsIn.length - groupsIn.length}* Groups Left
-• *${chats.length - groupsIn.length}* Personal Chats
-• *${chats.length}* Total Chats
+• *${groupsIn.length}* الدردشات الجماعية
+• *${groupsIn.length}* انضمت المجموعات
+• *${groupsIn.length - groupsIn.length}* جروبات الشمال
+• *${chats.length - groupsIn.length}* الدردشات الشخصية
+• *${chats.length}* إجمالي الدردشات
 
 
 *s ᴇ ʀ ᴠ ᴇ ʀ*
@@ -101,5 +101,5 @@ function clockString(ms) {
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [d, ' *Days ☀️*\n ', h, ' *Hours 🕐*\n ', m, ' *Minute ⏰*\n ', s, ' *Second ⏱️* '].map(v => v.toString().padStart(2, 0)).join('')
+  return [d, ' *ايام ☀️*\n ', h, ' *ساعات 🕐*\n ', m, ' *دقايق ⏰*\n ', s, ' *ثواني ⏱️* '].map(v => v.toString().padStart(2, 0)).join('')
 }
