@@ -3,11 +3,11 @@
  Licensed under the  GPL-3.0 License;
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
- * @project_name : Ikratos-MD-v1
- * @author : xIKRATOSx <https://github.com/xIKRATOSx>
- * @description : Ikratos-MD-v1,A Multi-functional simple and light weight whatsapp bot.
- * @version 1.0.0
- * @file : Ikratos-fancy.js
+ * @project_name : 𝙴𝙻 𝟹𝙼𝙳𝙰 𝙱𝙾𝚃
+ * @author : 𝙴𝙻 𝟹𝙼𝙳𝙰 𝙱𝙾𝚃 
+ * @description : 𝙴𝙻 𝟹𝙼𝙳𝙰 𝙱𝙾𝚃 
+ * @version 𝙴𝙻 𝟹𝙼𝙳𝙰 𝙱𝙾𝚃
+ * @file : 𝙴𝙻 𝟹𝙼𝙳𝙰 𝙱𝙾𝚃
  **/
 
  import fancyText from '../lib/fancy.js';
