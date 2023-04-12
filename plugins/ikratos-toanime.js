@@ -3,7 +3,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || q.mediaType || ""
 if (!/image/g.test(mime)) throw '*Respond to an image*'
-m.reply('*This command can turn your photo into anime\nWait a moment... Converting\n\n\nɪᴋʀᴀᴛᴏs-ᴍᴅ-ᴠ1 • ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ\nowner: +92 347 0027813*')    
+m.reply('*بي الامر ده تقدر تحول صوره عاظيه لي انمي\nاصبر 🤌...\n\n\n𝙴𝙻 𝟹𝙼𝙳𝙰 𝙱𝙾𝚃 • 𝙴𝙻 𝟹𝙼𝙳𝙰 𝙱𝙾𝚃\رقم المطور: +201284329186*')    
 let data = await q.download?.()
 let image = await uploadImage(data)
 try {
@@ -18,10 +18,10 @@ try{
 let anime3 = `https://api.caliph.biz.id/api/animeai?img=${image}&apikey=caliphkey`
 await conn.sendFile(m.chat, anime3, 'error.jpg', null, m) 
 } catch (e) {
-throw '*Error check if the persons face is visible*'
+throw '*حدث خطأما*'
 }}}}
 handler.help = ["toanime"]
 handler.tags = ["tools"]
 handler.diamond = true
-handler.command = /^(imganime|toanime)$/i
+handler.command = /^(انمي|toanime)$/i
 export default handler
