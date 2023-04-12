@@ -1,13 +1,13 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn, groupMetadata, usedPrefix, text, args, command }) => {
  let capt = `*${htki} Dare ${htka}*
- _Please be honest and do your dare_
+ كن قد تحدي
  
- Whatsapp Bot by Ahmad Ali
- *wa.me/923470027813*
+ البوت خاض بي محمد شرقاوي
+ *wa.me/+201284321986*
  
  
- Follow me on instagram:\n\t\t\titx_ahmad.ali
+ تابعني على انستغرام:\n\t\t\abu_sharkawy11
  `
 let buttons = [{ buttonText: { displayText: 'Truth or Dare' }, buttonId: `${usedPrefix}tod` }]
 
