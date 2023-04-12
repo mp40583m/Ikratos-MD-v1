@@ -9,14 +9,14 @@ let name = await conn.getName(m.sender)
     let listSections = []
 	Object.values(dapet).map((v, index) => {
 	listSections.push([index + ' ' + cmenub + ' ' + v.title, [
-          ['Audio 🎧', usedPrefix + 'opta ' + v.url + ' yes', '\n⌚ *Duration:* ' + v.durationH + '\n⏲️ *Uploaded:* ' + v.publishedTime + '\n👁️ *Views:* ' + v.view + '\n📎 *Url:* ' + v.url]
+          ['صوت 🎧', usedPrefix + 'opta ' + v.url + ' yes', '\n⌚ *مدة:* ' + v.durationH + '\n⏲️ *تم الرفع:* ' + v.publishedTime + '\n👁️ *المشاهدات:* ' + v.view + '\n📎 *الرابط:* ' + v.url]
         ]])
 	})
-	return conn.sendList(m.chat, '*───「 Song Result 」───*', `Please select the type below...\n*The text you requested:* ${text}\n\nRetype *${usedPrefix + command}* your text, to change the text again\n •--𝛸_𝛪𝛫𝑅𝛥𝑇𝛩𝑆_𝛸--• `, author, `Song list 🔎`, listSections, m)
+	return conn.sendList(m.chat, '*───「 نتيجة البحث 」───*', `اختار الاغنية...\n*الاغنية يلي طلبته:* ${text}\n\nRetype *${usedPrefix + command}* حاول مره تانيه\n 𝙴𝙻 𝟹𝙼𝙳𝙰 𝙱𝙾𝚃 `, author, `اختار 🔎`, listSections, m)
 }
 handler.help = ['ytsearch <query>']
 handler.tags = ['tools']
-handler.command = /^song?$/i
+handler.command = /^اغنيه?$/i
 handler.premium = false
 
 
